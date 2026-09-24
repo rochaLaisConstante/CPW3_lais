@@ -1,0 +1,17 @@
+[
+  {
+    "nome": "Ana Silva",
+    "nota": 9.5,
+    "curso": "Sistemas para Internet"
+  },
+  {
+    "nome": "Bruno Costa",
+    "nota": 7.8,
+    "curso": "Sistemas para Internet"
+  },
+  {
+    "nome": "Carlos Souza",
+    "nota": 8.5,
+    "curso": "Redes de Computadores"
+  }
+]
