@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "titulo": "Call of Duty",
+    "genero": "Batlle Royale",
+    "ano": 2003,
+    "nota": 8.5
+  },
+  {
+    "id": 2,
+    "titulo": "God of War",
+    "genero": "Ação",
+    "ano": 2018,
+    "nota": 9.5
+  },
+  {
+    "id": 4,
+    "titulo": "God of War",
+    "genero": "Ação",
+    "ano": 2018,
+    "nota": 9.5
+  }
+]
