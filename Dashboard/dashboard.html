@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PetCare - Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>🐾 PetCare</h1>
+        <button id="sair">Sair</button>
+    </header>
+    <main class="dashboard">
+        <h2>Dashboard</h2>
+        <p>Bem-vindo ao sistema de gerenciamento do petshop!</p>
+        <section class="cards">
+            <div class="card">
+                <h3>🐶 Pets cadastrados</h3>
+                <p class="numero" id="totalPets">128</p>
+            </div>
+            <div class="card">
+                <h3>📅 Agendamentos</h3>
+                <p class="numero">12</p>
+            </div>
+            <div class="card">
+                <h3>✂️ Serviços realizados</h3>
+                <p class="numero">36</p>
+            </div>
+            <div class="card">
+                <h3>💰 Faturamento</h3>
+                <p class="numero">R$ 2.840</p>
+            </div>
+        </section>
+        <section class="pets-section">
+            <h2>Cadastro de pets</h2>
+            <form id="petForm">
+                <input type="text" id="nomePet" placeholder="Nome do pet" required>
+
+                <input type="text" id="nomeTutor" placeholder="Nome do tutor" required>
+
+                <button type="submit">Cadastrar pet</button>
+            </form>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pet</th>
+                            <th>Tutor</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaPets">
+                        <tr>
+                            <td>Mel 🐶</td>
+                            <td>Ana Souza</td>
+                        </tr>
+                        <tr>
+                            <td>Simba 🐱</td>
+                            <td>Pedro Lima</td>
+                        </tr>
+                        <tr>
+                            <td>Thor 🐕</td>
+                            <td>Julia Alves</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
