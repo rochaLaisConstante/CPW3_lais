@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f6f2;
+    color: #263b2e;
+}
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 18px;
+    background-color: #47745d;
+    color: white;
+    font-weight: bold;
+}
+button:hover {
+    background-color: #345840;
+}
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.login-container {
+    width: 900px;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px #00000015;
+}
+.login-info {
+    background-color: #47745d;
+    color: white;
+    padding: 45px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 22px;
+}
+.login-info h1 {
+    font-size: 32px;
+}
+.login-info h2 {
+    font-size: 26px;
+}
+.login-info p {
+    line-height: 1.7;
+}
+.login-form {
+    padding: 45px 30px;
+}
+.login-form h2 {
+    margin-bottom: 10px;
+}
+.login-form>p {
+    margin-bottom: 25px;
+    color: #777;
+}
+.login-form label {
+    display: block;
+    margin: 16px 0 8px;
+    font-weight: bold;
+}
+.login-form input,
+
+#petForm input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d5ddd5;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+.login-form button {
+    width: 100%;
+    margin-top: 10px;
+}
+.login-form .login-footer {
+    margin-top: 25px;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 13px;
+}
+.header {
+    background-color: #47745d;
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header button {
+    background-color: white;
+    color: #345840;
+}
+.dashboard {
+    max-width: 1200px;
+    margin: auto;
+    padding: 35px 25px;
+}
+.dashboard>h2 {
+    margin-bottom: 10px;
+}
+.dashboard>p {
+    color: #6b786e;
+    margin-bottom: 25px;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 35px;
+}
+.card {
+    background-color: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000008;
+    border: 1px solid #e5ebe4;
+}
+.card h3 {
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+.numero {
+    font-size: 27px;
+    font-weight: bold;
+    color: #47745d;
+}
+.pets-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e5ebe4;
+}
+.pets-section h2 {
+    margin-bottom: 20px;
+}
+#petForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+#petForm input {
+    margin-bottom: 0;
+    min-width: 0;
+}
+.table-container {
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e5ebe4;
+}
+th {
+    background-color: #e4eee5;
+}
+@media (max-width: 800px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .login-container {
+        grid-template-columns: 1fr;
+    }
+
+    .login-info,
+    .login-form {
+        padding: 30px 24px;
+    }
+}
+@media (max-width: 500px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    #petForm {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard {
+        padding: 25px 15px;
+    }
+
+    .pets-section {
+        padding: 15px;
+    }
+}
