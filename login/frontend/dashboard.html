@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f7f6; display: flex; height: 100vh; }
+        aside { width: 250px; background-color: #1f4068; color: white; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; }
+        aside h2 { font-size: 20px; margin-bottom: 30px; }
+        aside nav a { color: #b8c1ec; text-decoration: none; display: block; padding: 10px 0; font-size: 16px; transition: color 0.2s; }
+        aside nav a:hover { color: white; }
+        main { flex: 1; display: flex; flex-direction: column; }
+        header { background: white; padding: 20px 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: flex; justify-content: space-between; align-items: center; }
+        .content { padding: 30px; }
+        .welcome-card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .welcome-card h3 { color: #1f4068; margin-bottom: 10px; }
+        .btn-sair { background-color: #e43f5a; color: white; padding: 8px 15px; border-radius: 4px; text-decoration: none; font-size: 14px; }
+        .btn-sair:hover { background-color: #d1344e; }
+    </style>
+</head>
+<body>
+    <aside>
+        <div>
+            <h2>Meu Sistema</h2>
+            <nav>
+                <a href="#">Início</a>
+                <a href="#">Perfil</a>
+                <a href="#">Configurações</a>
+            </nav>
+        </div>
+        <div>
+            <a href="/login" class="btn-sair">Terminar Sessão</a>
+        </div>
+    </aside>
+    <main>
+        <header>
+            <h2>Painel Principal</h2>
+            <span>Bem-vindo!</span>
+        </header>
+        <div class="content">
+            <div class="welcome-card">
+                <h3>Autenticação Bem-Sucedida!</h3>
+                <p>Você passou com sucesso pela verificação de dois fatores baseada em email e sessão.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
