@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Protegido</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Bem-vindo ao Dashboard!</h1>
+    <p>Se você está vendo isso, sua sessão está ativa.</p>
+
+
+    <h2>Lista de Produtos</h2>
+    <table border="1" id="tabela-produtos">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Preço (R$)</th>
+                <th>Quantidade</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <br>
+    <!-- Botão de Logout -->
+    <a href="/logout"><button>Sair do Sistema</button></a>
+
+    <script>
+        fetch('/api/produtos')
+            .then(response => response.json())
+            .then(produtos => {
+                const tbody = document.querySelector('#tabela-produtos tbody');
+                tbody.innerHTML = '';
+
+                produtos.forEach(prod => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+<td>${prod.id}</td>
+<td>${prod.nome}</td>
+<td>R$ ${prod.preco.toFixed(2)}</td>
+<td>${prod.quantidade}</td>
+`;
+                    tbody.appendChild(tr);
+                });
+            })
+            .catch(err => console.error('Erro ao carregar produtos:', err));
+    </script>
+</body>
+
+</html>
